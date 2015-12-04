@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :posts
+  root 'pages#welcome' 
+  
   get 'pages/welcome'
 
-  root 'pages#welcome' 
 
 
 
