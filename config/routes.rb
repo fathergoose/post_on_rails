@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root_to: 'pages#welcome' 
+  root 'pages#welcome' 
 
 
 
