@@ -2,34 +2,19 @@
 
 <h1>Listing Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="ui items">
+<% @posts.each do |post| %>
 
-  <tbody>
-    <% @posts.each do |post| %>
-    <div class="ui items">
-      <div class="item">
-        <div class="content">
-        <a class="header"><% post.title %></a>
-          <div class="description">
-            <%= post.preview_post %>
-          </div>
-        </div>
+  <div class="item">
+    <div class="content">
+      <a class="header"><% post.title %></a>
+      <div class="description">
+        <%= post.preview_post %>
       </div>
     </div>
-    <tr>
-      <td><%= link_to 'Show', post %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+<% end %>
 
+</div>  
 <%= link_to 'New Post', new_post_path %>
