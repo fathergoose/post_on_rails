@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'pages#welcome' 
   
   get 'pages/welcome'
-
+  get 'admin' => 'pages#admin'
 
 
 
