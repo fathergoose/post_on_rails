@@ -1,7 +1,17 @@
-<div class="ui menu">
+<div class="ui menu " style="margin-top:10px;">
 
 
-	<a class= "header item" href="/">take_me_home</a>
-
-
+	<a class= "header item" href="/">fathergoose</a>
+	<a class= "item" href="/">home</a>
+	<a class= "item" href="/">posts</a>
+	<a class= "item" href="/">about</a>
+	<a class= "item" href="https://github.com/fathergoose">github</a>
+	<div class="right menu">
+    <% if user_signed_in? %>
+      <%= link_to "sign out", "/users/sign_out", method: :delete, class: "item" %>
+    <% else %>
+      <%= link_to "sign in", "/users/sign_in", class: "item" %>
+      <%= link_to "sign up", "/users/sign_up", class: "item" %>
+    <% end %>
+  </div>
 </div>
