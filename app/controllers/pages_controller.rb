@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def welcome
   end
   def admin
+    @posts = Post.all
 
   end
 
