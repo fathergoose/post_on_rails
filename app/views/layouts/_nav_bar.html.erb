@@ -1,12 +1,9 @@
 <div class="ui menu " style="margin-top:10px;">
-
-
-	<a class= "header item" href="/">fathergoose</a>
-	<a class= "item" href="/">home</a>
-	<a class= "item" href="/">posts</a>
-	<a class= "item" href="/">about</a>
-	<a class= "item" href="https://github.com/fathergoose">github</a>
-	<div class="right menu">
+  <%= link_to "fathergoose", root_path, class: "header item" %>
+  <%= link_to "posts", posts_path, class: "item" %>
+  <%= link_to "about me", "/pages/about", class: "item" %>
+  <a class= "item" href="https://github.com/fathergoose">github</a>
+  <div class="right menu">
     <% if user_signed_in? %>
       <%= link_to "sign out", "/users/sign_out", method: :delete, class: "item" %>
     <% else %>
