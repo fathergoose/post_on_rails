@@ -11,11 +11,21 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="ui items">
+      <div class="item">
+        <div class="content">
+        <a class="header"><% post.title %></a>
+          <div class="description">
+            <%= post.preview %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <tr>
+      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
