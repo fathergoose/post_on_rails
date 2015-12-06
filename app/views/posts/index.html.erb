@@ -1,3 +1,4 @@
+<div class="ui text container">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Posts</h1>
@@ -7,7 +8,7 @@
 
   <div class="item">
     <div class="content">
-    <a class="header"><%= post.title %></a>
+      <%= link_to post.title, post_path(post.id), class: "header" %>
       <div class="description">
         <%= post.preview_body %>
       </div>
@@ -16,3 +17,4 @@
 
 <% end %>
 </div>  
+</div>
