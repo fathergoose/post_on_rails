@@ -1,18 +1,37 @@
 <%= link_to 'New Post', new_post_path  %>
-<div class="ui items">
-  <% @posts.each do |post| %>
-  <div class="ui fluid card">
-    <div class="content">
-      <%= link_to post.title, post_path(post.id), class: "header" %>
-      <div class="description">
-        <p>
-          <%= post.preview_body %>
-        </p> 
+<div class="ui grid">
+  <div class="five wide column">
+  </div>
+  <div class="eleven wide column">
+    <div class="ui pointing menu">
+      <a href=# class="active item">All</a>
+      <a href=# class="item">Published</a>
+      <a href=# class="item">Drafts</a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
       </div> 
     </div>
-    <div class="extra content">
-    <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green right floated" %>
-      </div> 
-  </div>
-  <% end %>
-</div> 
+    <div class="ui cards">
+      <% @posts.each do |post| %>
+      <div class="ui fluid card">
+        <div class="content">
+          <%= link_to post.title, post_path(post.id), class: "header" %>
+          <div class="description">
+            <p>
+              <%= post.preview_body %>
+            </p> 
+          </div> 
+        </div>
+        <div class="extra content">
+          <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green right floated" %>
+        </div> 
+      </div>
+      <% end %>
+    </div> 
+  </div> 
+</div>
