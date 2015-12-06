@@ -1,6 +1,14 @@
-<%= link_to 'New Post', new_post_path  %>
+
 <div class="ui grid">
   <div class="five wide column">
+    <div class="ui vertical menu">
+      <div class="header item">
+        Admin Panel
+      </div> 
+      <a href="/posts/new" class="item">
+        <i class="write icon"></i> New Post 
+      </a> 
+    </div> 
   </div>
   <div class="eleven wide column">
     <div class="ui pointing menu">
@@ -35,3 +43,4 @@
     </div> 
   </div> 
 </div>
+<%= link_to 'New Post', new_post_path  %>
