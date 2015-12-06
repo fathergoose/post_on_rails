@@ -6,6 +6,11 @@
   <div class="right menu">
     <% if user_signed_in? %>
       <%= link_to "sign out", "/users/sign_out", method: :delete, class: "item" %>
+      <% if current_user.admin %>
+        <%= link_to  :admin,  class: "item" do %>
+          <i class="dashboard icon"></i>
+        <% end %>
+      <% end %>
     <% else %>
       <%= link_to "sign in", "/users/sign_in", class: "item" %>
       <%= link_to "sign up", "/users/sign_up", class: "item" %>
