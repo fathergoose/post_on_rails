@@ -11,7 +11,7 @@
       </div> 
     </div>
     <div class="extra content">
-      <button class="ui button green right floated">Edit Post</button> 
+    <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green right floated" %>
       </div> 
   </div>
   <% end %>
