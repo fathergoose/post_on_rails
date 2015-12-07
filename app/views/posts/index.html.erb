@@ -10,7 +10,7 @@
     <div class="content">
       <%= link_to post.title, post_path(post.id), class: "header" %>
       <div class="description">
-        <%= post.preview_body %>
+        <%= markdown(post.preview_body) %>
       </div>
     </div>
   </div>
