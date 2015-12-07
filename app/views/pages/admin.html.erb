@@ -1,4 +1,6 @@
-
+<% content_for :onload do %>
+    onload="init();"
+<% end %>
 <div class="ui grid">
   <div class="two wide cloumn"></div>
   <div class="five wide column">
@@ -15,6 +17,22 @@
       <a href="/posts/new" class="item">
         <i class="users icon"></i> Users 
       </a> 
+      <div class="ui dropdown simple item">
+        Hello
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item"> NEW </a>
+        </div>
+      </div>
+      <div class="ui dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+          <div class="item" data-value="male">Male</div>
+          <div class="item" data-value="female">Female</div>
+        </div>
+      </div>
     </div> 
   </div>
   <div class="nine wide column">
@@ -23,7 +41,7 @@
       <a href=# class="item">Published</a>
       <a href=# class="item">Drafts</a>
       <!--a class="item">
-        <i class="sort icon"></i>
+      <i class="sort icon"></i>
       </a-->
       <div class="right menu">
 
@@ -37,25 +55,25 @@
     </div>
     <div class="ui cards">
       <% @posts.each do |post| %>
-      <div class="ui fluid card">
-        <div class="content">
-          <%= link_to post.title, post_path(post.id), class: "header" %>
-          <div class="meta">
-            <em>(#) Comments</em>
-          </div>
-          <div class="description">
-            <p>
+        <div class="ui fluid card">
+          <div class="content">
+            <%= link_to post.title, post_path(post.id), class: "header" %>
+            <div class="meta">
+              <em>(#) Comments</em>
+            </div>
+            <div class="description">
+              <p>
               <%= post.preview_body %>
-            </p> 
+              </p> 
+            </div> 
+          </div>
+          <div class="extra content meta">
+            <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green inverted right floated" %>
+            <i class="database icon"></i> id: <%= post.id %> <br/> 
+            <i class="wait icon"></i> <%= post.created_at %> <br/> 
+            <i class="retweet icon"></i> <%= post.updated_at %> <br/> 
           </div> 
         </div>
-        <div class="extra content meta">
-          <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green inverted right floated" %>
-          <i class="database icon"></i> id: <%= post.id %> <br/> 
-          <i class="wait icon"></i> <%= post.created_at %> <br/> 
-          <i class="retweet icon"></i> <%= post.updated_at %> <br/> 
-        </div> 
-      </div>
       <% end %>
     </div> 
   </div> 
