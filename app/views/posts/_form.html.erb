@@ -18,13 +18,18 @@
   <div class="field">
     <%= f.text_field :title %>
   </div> 
-  <div class="field">
+  <div class="text">
     <%= f.text_area :body %>
   </div> 
+  <div>
+  </div>
   <div class="actions">
     <%= f.submit "Save", class: "ui button" %>
   </div>
 <% end %>
+<%= form_tag '/posts', method: :post do %>
+  <%= check_box_tag :published %>
+  <% end %>
 </div>
 
 </div>
