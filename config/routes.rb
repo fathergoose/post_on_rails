@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'pages/welcome'
   get 'admin' => 'pages#admin'
   get 'pages/about'
-
+  
+  resources :images
 
 
 
