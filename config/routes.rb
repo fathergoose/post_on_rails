@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   
   resources :images
 
-
+  get 'pages/:id/publish' => 'pages#publish'
+  
 
 
 

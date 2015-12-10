@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :publish, :destroy]
   before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy] 
 
   # GET /posts
@@ -50,6 +50,11 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def publish
+    @post.update(published: true)
+    redirect_to '/posts'
   end
 
   # DELETE /posts/1

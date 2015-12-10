@@ -2,35 +2,35 @@
   <div class="one wide column">
   </div>
   <div class="fourteen wide column">
-  <%= form_for(@post,  html: {class: "ui form"}) do |f| %>
-  <% if @post.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <div class="ui form">
+      <%= form_for(@post,  html: {class: "ui form"}) do |f| %>
+        <% if @post.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-    <ul>
-      <% @post.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+            <ul>
+              <% @post.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.text_field :title %>
+        </div> 
+        <div class="text">
+          <%= f.text_area :body %>
+        </div> 
+        <div class="field">
+          <%= f.label :published %>
+          <%= f.check_box :published, class: "ui checkbox" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Save", class: "ui button" %>
+        </div>
       <% end %>
-    </ul>
+    </div>
   </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.text_field :title %>
-  </div> 
-  <div class="text">
-    <%= f.text_area :body %>
-  </div> 
-  <div>
-  </div>
-  <div class="actions">
-    <%= f.submit "Save", class: "ui button" %>
-  </div>
-<% end %>
-<%= form_tag '/posts', method: :post do %>
-  <%= check_box_tag :published %>
-  <% end %>
-</div>
-
 </div>
 
