@@ -7,13 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body <%= yield :onload if block_given? %>>
-<div class="ui container">
-<%= render "layouts/nav_bar" %>
+    <div class="ui container">
+      <%= render "layouts/nav_bar" %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-<%= yield %>
-</div>
+      <%= yield %>
+    </div>
+    <div class="ui container" id="fill-browser"></div>
 </body>
 </html>
