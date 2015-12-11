@@ -1,9 +1,13 @@
 @import "semantic-ui";
 
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
   background-color: #aaaaaa;
 }
 div.ui.container {
+  height: auto;
   background-color: #cccccc;
-  height: 100%;
 }
