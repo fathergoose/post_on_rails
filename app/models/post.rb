@@ -7,8 +7,13 @@ class Post < ActiveRecord::Base
     time = Time.now 
     update( published_at: time )
   end
+
   def date_published
     created_at.strftime("%b %d, %Y")
+  end
+
+  def date_updated
+    updated_at.strftime("%b %d, %Y")
   end
 
 end  
