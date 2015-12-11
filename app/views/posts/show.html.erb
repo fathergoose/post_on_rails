@@ -1,14 +1,14 @@
 <div class="ui text container">
-<p id="notice"><%= notice %></p>
-<h1>
-  <%= @post.title %>
-</h1>
-<p>
-<%= markdown(@post.body) %>
-</p>
+  <p id="notice"><%= notice %></p>
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <p>
+  <%= markdown(@post.body) %>
+  </p>
 
 
 
 
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Back', posts_path %>
 </div>
