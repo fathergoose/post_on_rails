@@ -6,7 +6,8 @@
         <h1><%= @post.title %></h1>
   </div>
   <div class="meta">
-    Published: Dec. 12, 2015
+    Published <%= @post.date_published %>
+    <%= "Updated " + @post.date_updated if @post.date_updated != @post.date_published %>
   </div>
   <div class="description">
   <%= markdown(@post.body) %>
