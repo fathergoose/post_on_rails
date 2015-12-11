@@ -1,29 +1,29 @@
 <div class="ui text container">
-  <p id="notice"><%= notice %></p>
+  <div class="ui grid">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
+      <p id="notice"><%= notice %></p>
 
-  <h1>Listing Posts</h1>
+      <h1>Listing Posts</h1>
 
-  <div class="ui cards">
-    <% @posts.each do |post| %>
-      <div class="ui fluid card">
-        <div class="content">
-          <%= link_to post.title, post_path(post.id), class: "header" %>
-          <div class="meta">
-            <%= post.date_published %>
-          </div>
-          <div class="description">
-            <p>
-            <%= post.preview_body %>
-            </p> 
+      <div class="ui one cards">
+        <% @posts.each do |post| %>
+          <div class="ui centered card">
+            <div class="content">
+              <%= link_to post.title, post_path(post.id), class: "header" %>
+              <div class="meta">
+                <%= post.date_published %>
+              </div>
+              <div class="description">
+                <p>
+                <%= post.preview_body %>
+                </p> 
+              </div> 
+            </div>
           </div> 
-        </div>
-        <div class="extra content meta">
-          <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green inverted right floated" %>
-          <i class="database icon"></i> id: <%= post.id %> <br/> 
-          <i class="wait icon"></i> <%= post.created_at %> <br/> 
-          <i class="retweet icon"></i> <%= post.updated_at %> <br/> 
-        </div> 
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
+  <div class="two wide column"></div>
 </div>
