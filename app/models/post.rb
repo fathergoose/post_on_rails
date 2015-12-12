@@ -16,4 +16,8 @@ class Post < ActiveRecord::Base
     updated_at.strftime("%b %d, %Y")
   end
 
+  def front_page
+    where(published: true).order(created_at: :desc).limit(1).first
+  end
+
 end  

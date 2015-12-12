@@ -1,7 +1,23 @@
 <div class="ui text container">
-<div class="ui message">
-<img class="ui image circular centered " src="http://www.desktopdress.com/desktopwallpapers/animals/goose-family.jpg">
-<h1>Pages#welcome</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p>
-</div>
+  <div class="ui huge message page grid center aligned">
+    <h1 class="ui huge header">Welcome</h1>
+    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <a class="ui green button">Sign up today</a>
+  </div>
+
+  <div class="ui fluid card ">
+    <div class="content">
+      <div class="header">
+        <h1><%= @post.title %></h1>
+      </div>
+      <div class="meta">
+        Published <%= @post.date_published %> |
+      </div>
+    </div>
+    <div class="content">
+      <div class="description">
+        <%= markdown(@post.body) %>
+      </div>
+    </div>
+  </div>
 </div>

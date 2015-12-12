@@ -10,12 +10,11 @@
         <%= "Updated " + @post.date_updated if @post.date_updated != @post.date_published %>
       </div>
     </div>
-      <div class="content">
-        <div class="description">
-          <%= markdown(@post.body) %>
-        </div>
+    <div class="content">
+      <div class="description">
+        <%= markdown(@post.body) %>
       </div>
     </div>
   </div>
-  <%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path, class: "ui button" %>
 </div>
