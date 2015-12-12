@@ -17,10 +17,16 @@
         <% end %>
 
         <div class="field">
+          <%= f.label :title %>
           <%= f.text_field :title %>
         </div> 
         <div class="text">
-          <%= f.text_area :body %>
+          <%= f.label :pretext %>
+          <%= f.text_area :pretext, rows: "5" %>
+        </div>
+        <div class="text">
+          <%= f.label :body %>
+          <%= f.text_area :body, rows: "35" %>
         </div> 
         <div class="field">
           <%= f.label :published %>
