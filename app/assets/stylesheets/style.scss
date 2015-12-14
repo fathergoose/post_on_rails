@@ -5,13 +5,35 @@ html {
 }
 body {
   height: 100%;
-  background-color: #aaaaaa;
+  background-color: #EEEEEE;
+  color: #3F3F3F;
 }
 div.ui.container {
   height: auto;
-  background-color: #cccccc;
 }
-#fill-browser {
-  height: 50%;
-  background-color: #cccccc;
+.card {
+  background-color: #FFFFFF;
+}
+div.ui.message{
+  background-color: #FFFFFF;
+}
+#nav {
+  background-color: #47D2E9;
+}
+div.container {
+}
+button.ui.green {
+  color: #66CC99;
+}
+#paper {
+  background-color: #FFFFFF;
+}
+a.button.ui.greenish {
+  background: #53DF83;
+}
+* {
+  color: #3F3F3F;
+}
+a.header {
+  color: #3F3F3F;
 }
