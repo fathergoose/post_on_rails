@@ -8,15 +8,15 @@
   <div class="ui fluid card ">
     <div class="content">
       <div class="header">
-        <h1><%= @post.title %></h1>
+        <h1><%= @post.title if @post%></h1>
       </div>
       <div class="meta">
-        Published <%= @post.date_published %> |
+        Published <%= @post.date_published if @post%> |
       </div>
     </div>
     <div class="content">
       <div class="description">
-        <%= markdown(@post.body) %>
+        <%= markdown(@post.body) if @post %>
       </div>
     </div>
   </div>
