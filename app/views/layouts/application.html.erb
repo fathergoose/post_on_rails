@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>PostOnRails</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body <%= yield :onload if block_given? %>>
+  <head>
+    <title>PostOnRails</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body <%= yield :onload if block_given? %>>
+
+    <%= render "layouts/nav_bar" %>
+    <div class='ui container' style="height:50px;"></div>
     <div class="ui container">
-      <%= render "layouts/nav_bar" %>
 
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
       <%= yield %>
     </div>
-    <div class="ui container" id="fill-browser"></div>
-</body>
+  </body>
 </html>
