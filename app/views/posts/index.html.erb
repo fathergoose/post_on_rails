@@ -1,29 +1,26 @@
 <div class="ui text container">
-  <div class="ui grid">
-    <div class="two wide column"></div>
-    <div class="twelve wide column">
-      <p id="notice"><%= notice %></p>
-
-      <h1>Listing Posts</h1>
-
-      <div class="ui one cards">
-        <% @posts.each do |post| %>
-          <div class="ui centered card">
-            <div class="content">
-              <%= link_to post.title, post_path(post.id), class: "header" %>
-              <div class="meta">
-                <%= post.date_published %>
-              </div>
-              <div class="description">
-                <p>
-                <%= post.pretext %>
-                </p> 
-              </div> 
-            </div>
-          </div> 
-        <% end %>
-      </div>
+  <div class="ui fluid card">
+    <div class="content">
+        <h1 id="index-head">All Posts</h1>
     </div>
   </div>
-  <div class="two wide column"></div>
+  <% @posts.each do |post| %>
+    <a href="/posts/<%=post.id%>" class="ui fluid card">
+      <div class="content">
+        <div class="header">
+          <h1>
+            <%= post.title %>
+          </h1>
+        </div>
+        <div class="meta">
+          <%= post.date_published %>
+        </div>
+        <div class="description">
+          <p>
+          <%= post.pretext %>
+          </p> 
+        </div> 
+      </div>
+    </a> 
+  <% end %>
 </div>
