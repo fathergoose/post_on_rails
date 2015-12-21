@@ -73,6 +73,12 @@
           </div>
           <div class="extra content meta">
             <%= button_to 'Edit Post', edit_post_path(post.id), method: "get", class: "ui button green inverted right floated" %>
+            <%= button_to 'Delete Post',
+              { action: 'destroy',
+                controller: 'posts',
+                id: post.id },
+                method: :delete,
+                data: { confirm: "Delete record from the Database?"} %>
             <i class="database icon"></i> id: <%= post.id %> <br/> 
             <i class="wait icon"></i> <%= post.created_at %> <br/> 
             <i class="retweet icon"></i> <%= post.updated_at %> <br/> 
