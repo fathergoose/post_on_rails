@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: post_on_rails_production
-  username: post_on_rails
+  username: deploy
   password: <%= ENV['POST_ON_RAILS_DATABASE_PASSWORD'] %>

@@ -1,0 +1,61 @@
+I, [2015-12-16T15:57:43.015174 #17697]  INFO -- : Refreshing Gem list
+I, [2015-12-16T15:57:44.980507 #17697]  INFO -- : listening on addr=/home/deploy/post_on_rails/shared/sockets/unicorn.sock fd=12
+I, [2015-12-16T15:57:44.980690 #17697]  INFO -- : worker=0 spawning...
+I, [2015-12-16T15:57:44.982909 #17697]  INFO -- : worker=1 spawning...
+I, [2015-12-16T15:57:44.983906 #17700]  INFO -- : worker=0 spawned pid=17700
+I, [2015-12-16T15:57:44.984074 #17700]  INFO -- : worker=0 ready
+I, [2015-12-16T15:57:44.985979 #17697]  INFO -- : master process ready
+I, [2015-12-16T15:57:44.992734 #17703]  INFO -- : worker=1 spawned pid=17703
+I, [2015-12-16T15:57:44.992930 #17703]  INFO -- : worker=1 ready
+I, [2015-12-16T16:20:10.943726 #17697]  INFO -- : reaped #<Process::Status: pid 17700 exit 0> worker=0
+I, [2015-12-16T16:20:10.943951 #17697]  INFO -- : reaped #<Process::Status: pid 17703 exit 0> worker=1
+I, [2015-12-16T16:20:10.944082 #17697]  INFO -- : master complete
+I, [2015-12-16T16:22:47.377076 #18721]  INFO -- : Refreshing Gem list
+I, [2015-12-16T16:22:49.145372 #18721]  INFO -- : unlinking existing socket=/home/deploy/post_on_rails/shared/sockets/unicorn.sock
+I, [2015-12-16T16:22:49.145655 #18721]  INFO -- : listening on addr=/home/deploy/post_on_rails/shared/sockets/unicorn.sock fd=12
+I, [2015-12-16T16:22:49.145791 #18721]  INFO -- : worker=0 spawning...
+I, [2015-12-16T16:22:49.148416 #18721]  INFO -- : worker=1 spawning...
+I, [2015-12-16T16:22:49.150781 #18724]  INFO -- : worker=0 spawned pid=18724
+I, [2015-12-16T16:22:49.150923 #18724]  INFO -- : worker=0 ready
+I, [2015-12-16T16:22:49.153825 #18721]  INFO -- : master process ready
+I, [2015-12-16T16:22:49.162140 #18727]  INFO -- : worker=1 spawned pid=18727
+I, [2015-12-16T16:22:49.162326 #18727]  INFO -- : worker=1 ready
+I, [2015-12-20T22:02:59.389514 #18721]  INFO -- : reaped #<Process::Status: pid 18724 exit 0> worker=0
+I, [2015-12-20T22:02:59.389960 #18721]  INFO -- : reaped #<Process::Status: pid 18727 exit 0> worker=1
+I, [2015-12-20T22:02:59.390135 #18721]  INFO -- : master complete
+I, [2015-12-20T22:46:25.406023 #1218]  INFO -- : Refreshing Gem list
+I, [2015-12-20T22:46:28.384876 #1218]  INFO -- : unlinking existing socket=/home/deploy/post_on_rails/shared/sockets/unicorn.sock
+I, [2015-12-20T22:46:28.385280 #1218]  INFO -- : listening on addr=/home/deploy/post_on_rails/shared/sockets/unicorn.sock fd=12
+I, [2015-12-20T22:46:28.385503 #1218]  INFO -- : worker=0 spawning...
+I, [2015-12-20T22:46:28.389471 #1218]  INFO -- : worker=1 spawning...
+I, [2015-12-20T22:46:28.393362 #1218]  INFO -- : master process ready
+I, [2015-12-20T22:46:28.399521 #1221]  INFO -- : worker=0 spawned pid=1221
+I, [2015-12-20T22:46:28.399776 #1221]  INFO -- : worker=0 ready
+I, [2015-12-20T22:46:28.401677 #1224]  INFO -- : worker=1 spawned pid=1224
+I, [2015-12-20T22:46:28.401845 #1224]  INFO -- : worker=1 ready
+I, [2015-12-20T22:48:23.646017 #1218]  INFO -- : reaped #<Process::Status: pid 1221 exit 0> worker=0
+I, [2015-12-20T22:48:23.646181 #1218]  INFO -- : reaped #<Process::Status: pid 1224 exit 0> worker=1
+I, [2015-12-20T22:48:23.646274 #1218]  INFO -- : master complete
+I, [2015-12-20T23:01:02.410377 #1600]  INFO -- : Refreshing Gem list
+I, [2015-12-20T23:01:04.472031 #1600]  INFO -- : unlinking existing socket=/home/deploy/post_on_rails/shared/sockets/unicorn.sock
+I, [2015-12-20T23:01:04.472302 #1600]  INFO -- : listening on addr=/home/deploy/post_on_rails/shared/sockets/unicorn.sock fd=12
+I, [2015-12-20T23:01:04.472464 #1600]  INFO -- : worker=0 spawning...
+I, [2015-12-20T23:01:04.474171 #1600]  INFO -- : worker=1 spawning...
+I, [2015-12-20T23:01:04.476620 #1600]  INFO -- : master process ready
+I, [2015-12-20T23:01:04.482334 #1603]  INFO -- : worker=0 spawned pid=1603
+I, [2015-12-20T23:01:04.482581 #1603]  INFO -- : worker=0 ready
+I, [2015-12-20T23:01:04.484071 #1606]  INFO -- : worker=1 spawned pid=1606
+I, [2015-12-20T23:01:04.484567 #1606]  INFO -- : worker=1 ready
+I, [2015-12-20T23:10:49.624456 #1600]  INFO -- : reaped #<Process::Status: pid 1603 exit 0> worker=0
+I, [2015-12-20T23:10:49.624848 #1600]  INFO -- : reaped #<Process::Status: pid 1606 exit 0> worker=1
+I, [2015-12-20T23:10:49.625040 #1600]  INFO -- : master complete
+I, [2015-12-20T23:17:09.425745 #1968]  INFO -- : Refreshing Gem list
+I, [2015-12-20T23:17:11.546142 #1968]  INFO -- : unlinking existing socket=/home/deploy/post_on_rails/shared/sockets/unicorn.sock
+I, [2015-12-20T23:17:11.546414 #1968]  INFO -- : listening on addr=/home/deploy/post_on_rails/shared/sockets/unicorn.sock fd=12
+I, [2015-12-20T23:17:11.546592 #1968]  INFO -- : worker=0 spawning...
+I, [2015-12-20T23:17:11.548592 #1968]  INFO -- : worker=1 spawning...
+I, [2015-12-20T23:17:11.549750 #1971]  INFO -- : worker=0 spawned pid=1971
+I, [2015-12-20T23:17:11.549957 #1971]  INFO -- : worker=0 ready
+I, [2015-12-20T23:17:11.552588 #1968]  INFO -- : master process ready
+I, [2015-12-20T23:17:11.560760 #1974]  INFO -- : worker=1 spawned pid=1974
+I, [2015-12-20T23:17:11.561427 #1974]  INFO -- : worker=1 ready

@@ -1,4 +1,4 @@
-<div class="ui menu fixed" id="nav"> <!--style="margin-top:10px;"-->
+<div class="ui menu inverted fixed" id="nav"> <!--style="margin-top:10px;"-->
   <%= link_to "fathergoose", root_path, class: "header item" %>
   <%= link_to "posts", posts_path, class: "item" %>
   <%= link_to "about me", "/pages/about", class: "item" %>
@@ -8,7 +8,7 @@
       <%= link_to "sign out", "/users/sign_out", method: :delete, class: "item" %>
       <% if current_user.admin %>
         <%= link_to  :admin,  class: "item" do %>
-          <i class="dashboard icon"></i>
+          <i class="dashboard inverted icon"></i>
         <% end %>
       <% end %>
     <% else %>
