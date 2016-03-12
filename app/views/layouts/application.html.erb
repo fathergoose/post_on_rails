@@ -7,6 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link rel="stylesheet" type="text/css" href="/semantic.min.css">
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'little_goose.ico' %>
   </head>
   <body <%= yield :onload if block_given? %>>
 
