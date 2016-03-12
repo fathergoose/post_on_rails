@@ -1,3 +1,47 @@
 /*******************************
          Site Overrides
 *******************************/
+/*@import "semantic-ui";*/
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #EEEEEE;
+  color: #3F3F3F;
+}
+div.ui.container {
+  height: auto;
+}
+.card {
+  background-color: #FFFFFF;
+}
+div.ui.message{
+  background-color: #FFFFFF;
+}
+#nav {
+  background-color: #3F3F3F;
+}
+#index-head {
+  font-size: 2em;
+}
+button.ui.green {
+  color: #66CC99;
+}
+#paper {
+  background-color: #FFFFFF;
+}
+a.button.ui.greenish {
+  background: #53DF83;
+}
+* {
+  color: #3F3F3F;
+}
+a.header {
+  color: #3F3F3F;
+}
+div.CodeRay {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
