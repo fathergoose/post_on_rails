@@ -12,6 +12,5 @@
 !/log/.keep
 /tmp
 config/database.yml
-public/assets/*
 .rbenv_vars
 node_modules/
