@@ -4,16 +4,11 @@
   <%= link_to "about me", "/pages/about", class: "item" %>
   <a class= "item" href="https://github.com/fathergoose">github</a>
   <div class="right menu">
-    <% if user_signed_in? %>
-      <%= link_to "sign out", "/users/sign_out", method: :delete, class: "item" %>
-      <% if current_user.admin %>
-        <%= link_to  :admin,  class: "item" do %>
-          <i class="dashboard inverted icon"></i>
-        <% end %>
+    <% if user_signed_in? && current_user.admin %>
+      <%= link_to 'logout', destroy_user_session_path, {:method => :delete, class: "item"} %>
+      <%= link_to  :admin,  class: "item" do %>
+        <i class="dashboard inverted icon"></i>
       <% end %>
-    <% else %>
-      <%= link_to "sign in", "/users/sign_in", class: "item" %>
-      <%= link_to "sign up", "/users/sign_up", class: "item" %>
     <% end %>
   </div>
 </div>
