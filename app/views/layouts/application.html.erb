@@ -5,8 +5,7 @@
     
     <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script src="semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
     <%= csrf_meta_tags %>
   </head>
   <body <%= yield :onload if block_given? %>>
@@ -21,4 +20,6 @@
       <%= yield %>
     </div>
   </body>
+    <script src="jquery-2.2.1.min.js"></script>
+    <script src="semantic.min.js"></script>
 </html>
