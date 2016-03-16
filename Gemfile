@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -39,8 +39,9 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'carrierwave'
 # gem "bower-rails", "~> 0.10.0"
-
+# Stuff heroku wants
 gem 'puma'
+gem 'rails_12factor'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
