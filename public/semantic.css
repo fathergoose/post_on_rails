@@ -725,6 +725,10 @@ div.CodeRay {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+#welcome {
+  text-align: center;
+}
 /*!
  * # Semantic UI 2.1.8 - Button
  * http://github.com/semantic-org/semantic-ui/
