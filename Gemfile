@@ -40,6 +40,8 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'carrierwave'
 # gem "bower-rails", "~> 0.10.0"
+
+gem 'puma'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
