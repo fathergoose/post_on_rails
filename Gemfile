@@ -37,7 +37,6 @@ gem 'seed_dump'
 
 gem 'redcarpet'
 gem 'coderay'
-gem 'carrierwave'
 # gem "bower-rails", "~> 0.10.0"
 # Stuff heroku wants
 gem 'puma'
