@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  def self.last_published
+  end
+
   def preview_body
     body[0..400].gsub(/\s\w+\s*$/,'...') # give the first chars and carefully append with ...
   end 
