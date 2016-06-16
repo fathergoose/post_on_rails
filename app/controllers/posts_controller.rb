@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    unless @post.published || user_signed_in? && current_user.admin
+      raise ActiveRecord::RecordNotFound.new
+    end
   end
 
   # GET /posts/new

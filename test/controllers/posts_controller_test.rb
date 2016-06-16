@@ -56,8 +56,9 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should not show unpublished post for guest" do
-    get :show, id: @unpublished_post
-    assert_response :missing
+    assert_raises(ActiveRecord::RecordNotFound) do
+      get :show, id: @unpublished_post
+    end
   end
   
   test "should get edit for admin" do
