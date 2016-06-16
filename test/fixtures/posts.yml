@@ -1,11 +1,8 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+published:
+  title: helloworld
+  body: This is the body, it can be long
+  published: true
 
-one:
-  title: 
-  body: 
-  author: MyString
-
-two:
-  title: 
-  body: 
-  author: MyString
+unpublished:
+  title: goodbyeworld
+  body: Last post ever, goodbye
