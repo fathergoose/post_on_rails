@@ -6,4 +6,9 @@ class PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get admin for admin" do
+    sign_in users(:al)
+    get :admin
+    assert_response :success
+  end
 end
