@@ -1,5 +1,9 @@
 class Post < ActiveRecord::Base
   def self.last_published
+    where(published: true)
+    .order(created_at: :desc)
+    .limit(1)
+    .first
   end
 
   def preview_body
