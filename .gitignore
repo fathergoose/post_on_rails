@@ -15,3 +15,4 @@ config/database.yml
 .rbenv_vars
 node_modules/
 coverage/
+doc/
