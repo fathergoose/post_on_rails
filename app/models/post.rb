@@ -6,13 +6,13 @@ class Post < ActiveRecord::Base
     .first
   end
 
+  # take the first 400 chars and carefully append with '...'
   def preview_body
-    body[0..400].gsub(/\s\w+\s*$/,'...') # give the first chars and carefully append with ...
+    body[0..400].gsub(/\s\w+\s*$/,'...')
   end 
 
-  def publishd_timestamp!
-    time = Time.now 
-    update( published_at: time )
+  def publish_timestamp!
+    update published_at: Time.now 
   end
 
   def date_published
@@ -22,9 +22,4 @@ class Post < ActiveRecord::Base
   def date_updated
     updated_at.strftime("%b %d, %Y")
   end
-
-  def front_page
-    where(published: true).order(created_at: :desc).limit(1).first
-  end
-
 end  
