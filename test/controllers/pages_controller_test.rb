@@ -14,6 +14,6 @@ class PagesControllerTest < ActionController::TestCase
 
   test "should not get admin for guest" do
     get :admin
-    assert_redirected_to controller: "pages", action: "index"
+    assert_redirected_to root_path
   end
 end
