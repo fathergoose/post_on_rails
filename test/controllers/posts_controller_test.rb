@@ -6,7 +6,7 @@ class PostsControllerTest < ActionController::TestCase
     @unpublished_post = posts(:unpublished)
     @post_params = {
       title: 'learn about rails',
-      content: 'rails new; rake; now fix those tests'
+      body: 'rails new; rake; now fix those tests'
     }
   end
 

@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  validates :title, :body, presence: true
+
   def self.last_published
     where(published: true)
     .order(created_at: :desc)

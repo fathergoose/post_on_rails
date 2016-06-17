@@ -1,6 +1,16 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
+  test "should not save post without title" do
+    post_without_title = Post.new(body: "this is a post")
+    assert_not post_without_title.save
+  end
+
+  test "should not save post without body" do
+    post_without_body = Post.new(title: "hello")
+    assert_not post_without_body.save
+  end
+
   test ".last_published returns most recently published post" do
     latest_post = Post.last_published
     assert_equal latest_post, posts(:last_published),
