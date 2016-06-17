@@ -55,11 +55,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def publish
-    @post.update(published: true)
-    redirect_to '/posts'
-  end
-
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
