@@ -14,4 +14,8 @@ class PostTest < ActiveSupport::TestCase
   test "#preview_body adds an elipsis to the end" do
     skip
   end
+
+  test "#preview_body takes an argument for length of preview" do
+    skip
+  end
 end
