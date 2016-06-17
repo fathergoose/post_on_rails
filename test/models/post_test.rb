@@ -6,4 +6,12 @@ class PostTest < ActiveSupport::TestCase
     assert_equal latest_post, posts(:last_published),
     "failed to return the most recently published post"
   end
+
+  test "#preview_body takes the first 400 chars" do
+    skip
+  end
+
+  test "#preview_body adds an elipsis to the end" do
+    skip
+  end
 end
