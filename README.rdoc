@@ -1,2 +1,51 @@
-# Description
-A simple content management system built using Ruby on Rails. This software is deployed at blog.ilseman.com and runs my professional blog.
+= Description
+
+A simple content management system built using Ruby on Rails. This software is deployed at http://blog.ilseman.com where it runs my professional blog.
+
+= Installation
+
+=== Requirements
+
+- Ruby 2.3
+- Rails 4.2.4
+- Postgresql
+
+=== Clone
+
+  $ git clone https://github.com/fathergoose/post_on_rails && cd post_on_rails
+
+=== Install gems
+
+  $ bundle install
+
+=== Create and migrate the database
+
+  $ rake db:create && rake db:migrate
+
+*Optionally*, you can seed the database with some test articles
+
+  $ rake db:seed
+
+To launch the application in development mode, run
+
+  $ rails server
+
+And visit http://localhost:3000
+
+= Testing
+
+Testing is done using minitest and stays close to rails conventions wherever possible. Use
+
+  $ rake
+
+to run the test suite and build coverage stats using simplecov[https://github.com/colszowka/simplecov]. The coverage stats may be browsed using the command
+
+  $ rake browse:coverage
+
+Full documentation for this application can be built with
+
+  $ rake doc:app
+
+and then browsed with
+
+  $ rake browse:docs
