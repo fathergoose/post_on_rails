@@ -24,7 +24,7 @@ class PostsControllerTest < ActionController::TestCase
 
   test "should not get new for guest" do
     get :new
-    assert_redirected_to controller: "devise/sessions", action: "new"
+    assert_redirected_to :new_user_session
   end
 
   test "should not create post for guest" do
@@ -32,7 +32,7 @@ class PostsControllerTest < ActionController::TestCase
       post :create, post: @post_params
     end
 
-    assert_redirected_to controller: "devise/sessions", action: "new"
+    assert_redirected_to :new_user_session
   end
 
   test "should create post for admin" do
@@ -69,7 +69,7 @@ class PostsControllerTest < ActionController::TestCase
 
   test "should not get edit for guest" do
     get :edit, id: @published_post
-    assert_redirected_to controller: "devise/sessions", action: "new"
+    assert_redirected_to :new_user_session
   end
 
   test "should update post for admin" do
@@ -98,6 +98,6 @@ class PostsControllerTest < ActionController::TestCase
       post :create, post: @post_params
     end
 
-    assert_redirected_to controller: "devise/sessions", action: "new"
+    assert_redirected_to :new_user_session
   end
 end

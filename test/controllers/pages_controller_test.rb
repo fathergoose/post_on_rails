@@ -14,6 +14,6 @@ class PagesControllerTest < ActionController::TestCase
 
   test "should not get admin for guest" do
     get :admin
-    assert_redirected_to root_path
+    assert_redirected_to controller: "devise/sessions", action: "new"
   end
 end

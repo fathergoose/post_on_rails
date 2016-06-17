@@ -12,10 +12,6 @@ class Post < ActiveRecord::Base
     body[0..max_length].gsub(/\s\w+\s*$/,'...')
   end 
 
-  def publish_timestamp!
-    update published_at: Time.now 
-  end
-
   def date_published
     created_at.strftime("%b %d, %Y")
   end
