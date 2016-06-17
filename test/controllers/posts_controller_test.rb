@@ -44,6 +44,13 @@ class PostsControllerTest < ActionController::TestCase
     assert_redirected_to post_path(assigns(:post))
   end
 
+  test "should not create invalid post" do
+    assert_no_difference('Post.count') do
+      sign_in users(:al)
+      post :create, post: {title: ''}
+    end
+  end
+
   test "should show published post" do
     get :show, id: @published_post
     assert_response :success
@@ -76,6 +83,12 @@ class PostsControllerTest < ActionController::TestCase
     sign_in users(:al)
     patch :update, id: @published_post, post: @post_params
     assert_redirected_to post_path(assigns(:post))
+  end
+
+  test "should stay on edit when update uses invalid params" do
+    sign_in users(:al)
+    post :update, id: @published_post, post: {title: ''}
+    assert_template :edit
   end
 
   test "should not update post for guest" do
