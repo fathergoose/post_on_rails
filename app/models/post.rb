@@ -7,8 +7,9 @@ class Post < ActiveRecord::Base
   end
 
   # take the first 400 chars and carefully append with '...'
-  def preview_body(preview_length=400)
-    body[0..preview_length].gsub(/\s\w+\s*$/,'...')
+  def preview_body(max_length=400)
+    max_length -= 3 # Account for three dots
+    body[0..max_length].gsub(/\s\w+\s*$/,'...')
   end 
 
   def publish_timestamp!

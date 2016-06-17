@@ -7,15 +7,17 @@ class PostTest < ActiveSupport::TestCase
     "failed to return the most recently published post"
   end
 
-  test "#preview_body takes the first 400 chars" do
-    skip
+  test "#preview_body takes an argument for the minimum length of preview" do
+    post = posts(:published)
+    max_length = 10
+    preview = post.preview_body(max_length)
+    assert preview.length <= max_length 
   end
 
   test "#preview_body adds an elipsis to the end" do
-    skip
+    post = posts(:published)
+    preview = post.preview_body
+    assert_equal preview[-3, 3], '...'
   end
 
-  test "#preview_body takes an argument for length of preview" do
-    skip
-  end
 end
