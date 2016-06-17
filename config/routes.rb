@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get 'admin' => 'pages#admin'
   get 'pages/about'
   
-  resources :images
 
   get 'pages/:id/publish' => 'pages#publish'
   
