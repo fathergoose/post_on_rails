@@ -57,3 +57,5 @@ group :development do
   gem 'guard-minitest'
 end
 
+gem 'simplecov', :require => false, :group => :test
+
